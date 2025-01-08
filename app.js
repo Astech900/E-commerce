@@ -10,7 +10,6 @@ getNewQuotes.addEventListener("click",()=>{
 let apiUrl = 'https://api.api-ninjas.com/v1/quotes';
 let apiKey = 'JdfbjWykkPShxFY7aUVhVw==cGmMnlnP1Tfu16CK';
 
-
 async function getQuotes() {
     fetch(apiUrl,{
         method:'GET',
