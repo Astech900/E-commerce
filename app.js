@@ -4,16 +4,8 @@ let getNewQuotes = document.getElementById("new-qoutes");
 
 
 getNewQuotes.addEventListener("click",()=>{
-    
-    getQuotes()
-    
+    getQuotes();
 })
-
-
-
-
-
-
 
 let apiUrl = 'https://api.api-ninjas.com/v1/quotes';
 let apiKey = 'JdfbjWykkPShxFY7aUVhVw==cGmMnlnP1Tfu16CK';
@@ -28,17 +20,13 @@ async function getQuotes() {
     }).then(res=>res.json())
     .then(data=>{
         for(qout of data){
-            
             displayAuthor.innerHTML = qout.author;
             displayQoute.innerHTML = qout.quote;
-            
-
-                
-            
-            
-            
         }
         
+    })
+    .catch(err =>{
+       displayQoute.innerHTML = `Error Detected, Check your API's`;
     })
     
 }
