@@ -9,7 +9,7 @@ getNewQuotes.addEventListener("click",()=>{
 })
 
 tweetButton.addEventListener("click",()=>{
-    window.open("https://twitter.com/intent/tweet?text=" + displayQoute.innerHTML,"Tweet Window", width="600px", height="300px")
+    window.open("https://twitter.com/intent/tweet?text=" + displayQoute.innerHTML + " ----by " + displayAuthor.innerHTML,"Tweet Window", width="600px", height="300px")
 })
 
 let apiUrl = 'https://api.api-ninjas.com/v1/quotes';
